@@ -22,8 +22,8 @@ do {
 
     if(entrada == "fin") {
         alert("Resumen: \n"+"Pares OK: "+(produccion-fallado) +"\n" +"Burbujas: "+burbujas +"\n"+"Rebaba Abierta: "+rebaba +"\n"+"Rota: "+rota +"\n"+"Manchada: "+manchada +"\n"+"Agarrada: "+agarrada +"\n")
-        alert("Su eficiencia fue de "+ porcentaje(produccion, objetivoParseado) + "%")
-        alert("Tuvo un fallado del "+ porcentaje(fallado, produccion)+ "%")
+        alert("Su eficiencia fue de "+ porcentaje(produccion, objetivoParseado))
+        alert("Tuvo un fallado del "+ porcentaje(fallado, produccion))
         alert("La distribución de su fallado fue: \n"+"Burbujas: "+burbujas/(burbujas+rebaba+rota+manchada+agarrada)*100+"%\n"+"Rebaba Abierta: "+rebaba/(burbujas+rebaba+rota+manchada+agarrada)*100+"%\n"+"Rota: "+rota/(burbujas+rebaba+rota+manchada+agarrada)*100+"%\n"+"Manchada: "+manchada/(burbujas+rebaba+rota+manchada+agarrada)*100+"%\n"+"Agarrada: "+agarrada/(burbujas+rebaba+rota+manchada+agarrada)*100+"%\n")      
             
     } else if(entrada=="ok" || entrada=="b" || entrada=="r" ||   entrada=="t" || entrada=="m" || entrada=="a"){
