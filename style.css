@@ -1,3 +1,20 @@
+.datos-operario {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: #EDEDED;
+    
+
+}
+
+.datos-operario .form-control {
+    width: 50%;
+}
+
+
+
+
+
 
 .header {
     background-color: #EDEDED;
@@ -54,6 +71,11 @@
 }
 
 h5 {
-    font-size: 2rem;
+    font-size: 3rem;
 }
 
+.submit {
+    width: 7em;
+    height: 5em;
+    
+}
