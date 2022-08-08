@@ -1,113 +1,18 @@
-// Ingreso------------------------------------------
-
-const ingreso = document.getElementById('form-ingreso');
-let operario
-let maquina
-let horaInicio
-const fecha = new Date();
-
-
-
-ingreso.addEventListener('submit', (e)=> {
-    e.preventDefault();
-    
-    const formIngreso = (e.target)
-    operario = formIngreso[0].value;
-    maquina = formIngreso[1].value;
-    let hora = new Date();
-    horaInicio = hora;
-    const datosOperario = document.getElementById('pantallaInicio');
-    datosOperario.className = 'datos-operario d-none' ; 
-    const h1maquina = document.getElementById('h1maquina');
-    h1maquina.innerText = maquina;
-    const h2operario = document.getElementById('h2operario');
-    h2operario.innerText = operario;
-
-
-
-})
-
-console.log(operario)
-
-// Header ----------------------------------------------
-
-const fechaYHora = document.getElementById('hora');
-const dia = new Date();
-fechaYHora.innerText = dia.getDate() + "/" + dia.getMonth();
 
 
 
 
+const tabla = document.getElementById('tabla');
+const listadoString = localStorage.getItem('registros')
+console.log(listadoString)
 
 
 
-
-// Constructor--------------------------------------------
-
-
-
-
-
-
-class Registro {
-    constructor(año, mes, dia, hora, minuto, operario, maquina, modelo, color, talle, cantidad, estado){
-        
-        
-        this.año = año;
-        this.mes = mes;
-        this.dia = dia;
-        this.hora = hora;
-        this.minuto = minuto;
-        this.operario = operario;
-        this.maquina = maquina;
-        this.modelo = modelo;
-        this.color = color;
-        this.talle = talle;
-        this.cantidad = parseInt(cantidad);
-        this.estado = estado;      
-        
-
-
-    }
-   
-    
-}
-
-//Listado-------------------------------------------------------- 
-
-const listado = [];
-
-
-
-
-//Funciones------------------------------------------------------
-
-
-
-function porcentaje (num1, num2) {
-    return ((num1/num2)*100).toFixed(1) + "%"
-  }
-function crearRegistro (modelo, color, talle, estado) {
-    const registro = new Registro (
-        fecha.getDate(),
-        fecha.getMonth(),
-        fecha.getFullYear(),      
-        fecha.getHours(),
-        fecha.getMinutes(),
-        operario,
-        maquina,
-        modelo,
-        color,
-        talle,
-        1,
-        estado   
-    )
-    listado.push(registro)
-    console.log(listado)
-    const tabla = document.getElementById('tabla');
-    const tr = document.createElement('tr');
-
-    tr.innerHTML = `
+if (listadoString!=null) {  
+    listado = JSON.parse(listadoString)
+    listado.forEach((registro)=> {
+        const tr = document.createElement('tr');
+        tr.innerHTML = `
         <td>${registro.año}</td>
         <td>${registro.mes}</td>
         <td>${registro.dia}</td>
@@ -116,23 +21,98 @@ function crearRegistro (modelo, color, talle, estado) {
         <td>${registro.operario}</td>
         <td>${registro.maquina}</td>
         <td>${registro.modelo}</td>
+        <td>${registro.color}</td>
         <td>${registro.talle}</td>
         <td>${registro.cantidad}</td>
         <td>${registro.estado}</td>
-
-    `;
-
+    
+        `;
+    
     tabla.append(tr);
-   
+       
+    } )
+    
+    
+
+
+
+} 
+
+
+
+
+
+
+
+// Ingreso------------------------------------------
+
+
+
+const ingreso = document.getElementById('form-ingreso');
+let operario
+let maquina
+let horaInicio
+const fecha = new Date();
+console.log( operario, maquina, horaInicio)
+operarioString = localStorage.getItem('operario')
+operario = JSON.parse(operarioString)
+maquinaString = localStorage.getItem('maquina')
+maquina = JSON.parse(maquinaString)
+horaInicioString = localStorage.getItem('horaInicio')
+horaInicio = JSON.parse(horaInicioString)  
+
+
+
+if (operario==undefined) {
+    ingreso.addEventListener('submit', (e)=> {
+        e.preventDefault();
+        
+        const formIngreso = (e.target)
+        operario = formIngreso[0].value;
+        maquina = formIngreso[1].value;
+        let hora = new Date();
+        horaInicio = hora;
+        const datosOperario = document.getElementById('pantallaInicio');
+        datosOperario.className = 'datos-operario d-none' ; 
+        const h1maquina = document.getElementById('h1maquina');
+        h1maquina.innerText = maquina;
+        const h2operario = document.getElementById('h2operario');
+        h2operario.innerText = operario;
+        localStorage.setItem('operario', JSON.stringify(operario))
+        localStorage.setItem('maquina', JSON.stringify(maquina))
+        localStorage.setItem('horaInicio', JSON.stringify(horaInicio))
+       
+
+
+    })
+} else {
+    
+    const datosOperario = document.getElementById('pantallaInicio');
+    datosOperario.className = 'datos-operario d-none' ; 
+    const h1maquina = document.getElementById('h1maquina');
+    h1maquina.innerText = maquina;
+    const h2operario = document.getElementById('h2operario');
+    h2operario.innerText = operario; 
+
 
 }
 
+//Cierre de Sesion -----------------------------------
+
+const cerrarSesion = document.getElementById('cerrarSesion');
+cerrarSesion.addEventListener('click', (e)=>{
+    localStorage.clear();
+    location.reload();
+})
 
 
 
 
+// Header ----------------------------------------------
 
-
+const fechaYHora = document.getElementById('hora');
+const dia = new Date();
+fechaYHora.innerText = dia.getDate() + "/" + dia.getMonth();
 
 
 
