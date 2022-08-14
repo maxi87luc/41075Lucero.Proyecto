@@ -1,7 +1,8 @@
 //Funciones------------------------------------------------------
 
 
-let listado = [];
+
+
 function porcentaje (num1, num2) {
     return ((num1/num2)*100).toFixed(1) + "%"
   }
