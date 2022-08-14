@@ -1,9 +1,8 @@
 class Registro {
-    constructor(año, mes, dia, hora, minuto, operario, maquina, modelo, color, talle, cantidad, estado){
+    constructor(dia, hora, minuto, operario, maquina, modelo, color, talle, cantidad, estado){
         
         
-        this.año = año;
-        this.mes = mes;
+        
         this.dia = dia;
         this.hora = hora;
         this.minuto = minuto;

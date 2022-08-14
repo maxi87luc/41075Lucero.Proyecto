@@ -6,12 +6,13 @@ function porcentaje (num1, num2) {
     return ((num1/num2)*100).toFixed(1) + "%"
   }
 function crearRegistro (modelo, color, talle, estado) {
+    const dt = DateTime.now();
     const registro = new Registro (
-        fecha.getDate(),
-        (fecha.getMonth())+1,
-        fecha.getFullYear(),      
-        fecha.getHours(),
-        fecha.getMinutes(),
+        
+
+        dt.toLocaleString(DateTime.DATE_SHORT),
+        dt.hour,
+        dt.minute,
         operario,
         maquina,
         modelo,
@@ -64,9 +65,7 @@ function crearRegistro (modelo, color, talle, estado) {
     const tabla = document.getElementById('tabla');
     const tr = document.createElement('tr');
 
-    tr.innerHTML = `
-        <td>${registro.año}</td>
-        <td>${registro.mes}</td>
+    tr.innerHTML = `       
         <td>${registro.dia}</td>
         <td>${registro.hora}</td>
         <td>${registro.minuto}</td>
