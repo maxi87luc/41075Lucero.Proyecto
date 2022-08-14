@@ -101,8 +101,26 @@ if (operario==undefined) {
 
 const cerrarSesion = document.getElementById('cerrarSesion');
 cerrarSesion.addEventListener('click', (e)=>{
-    localStorage.clear();
-    location.reload();
+    swal({
+        title: "¿Seguro que desea salir?",
+        text: "Se restaruraran a cero todos los registros",
+        icon: "warning",
+        buttons: true,
+        dangerMode: true,
+      })
+      .then((willDelete) => {
+        if (willDelete) {
+          swal("Su sesion ha terminado, hasta pronto", {
+            icon: "success",
+            
+          });
+            localStorage.clear();
+            location.reload();
+        } else {
+          swal("Puede continuar generando registros");
+        }
+      });
+    
 })
 
 
