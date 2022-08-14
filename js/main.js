@@ -4,27 +4,25 @@
 const DateTime = luxon.DateTime;
 const tabla = document.getElementById('tabla');
 const listadoString = localStorage.getItem('registros')
-console.log(listadoString)
+let listado = JSON.parse(listadoString) || [];
 
 
 
-if (listadoString!=null) {  
-    listado = JSON.parse(listadoString)
-    listado.forEach((registro)=> {
+    listado.forEach(({año, mes, dia, hora, minuto, operario, maquina, modelo, color, talle, cantidad, estado})=> {
         const tr = document.createElement('tr');
         tr.innerHTML = `
-        <td>${registro.año}</td>
-        <td>${registro.mes}</td>
-        <td>${registro.dia}</td>
-        <td>${registro.hora}</td>
-        <td>${registro.minuto}</td>
-        <td>${registro.operario}</td>
-        <td>${registro.maquina}</td>
-        <td>${registro.modelo}</td>
-        <td>${registro.color}</td>
-        <td>${registro.talle}</td>
-        <td>${registro.cantidad}</td>
-        <td>${registro.estado}</td>
+        <td>${año}</td>
+        <td>${mes}</td>
+        <td>${dia}</td>
+        <td>${hora}</td>
+        <td>${minuto}</td>
+        <td>${operario}</td>
+        <td>${maquina}</td>
+        <td>${modelo}</td>
+        <td>${color}</td>
+        <td>${talle}</td>
+        <td>${cantidad}</td>
+        <td>${estado}</td>
     
         `;
     
@@ -36,7 +34,7 @@ if (listadoString!=null) {
 
 
 
-} 
+
 
 
 
@@ -52,8 +50,12 @@ const ingreso = document.getElementById('form-ingreso');
 let operario
 let maquina
 let horaInicio
+
+
 const dt = DateTime.now();
 console.log( operario, maquina, horaInicio)
+
+
 operarioString = localStorage.getItem('operario')
 operario = JSON.parse(operarioString)
 maquinaString = localStorage.getItem('maquina')
@@ -64,8 +66,7 @@ maquina = JSON.parse(maquinaString)
 
 if (operario==undefined) {
     ingreso.addEventListener('submit', (e)=> {
-        e.preventDefault();
-        
+        e.preventDefault();        
         const formIngreso = (e.target)
         operario = formIngreso[0].value;
         maquina = formIngreso[1].value;
@@ -151,7 +152,7 @@ form1.addEventListener('submit', (e)=> {
         tiempo: parseInt(formulario1[2].value)
     }
 
-    console.log(modelo1)
+    
 })
 
 
