@@ -20,6 +20,29 @@ function crearRegistro (modelo, color, talle, estado) {
         1,
         estado   
     )
+    if (registro.estado == "OK"){
+        Toastify({
+            text: registro.modelo + " " + registro.color + " " + registro.talle + " " + registro.estado,
+            duration: 3000,
+            gravity: top,
+            position: top,
+            style: {
+                background: "linear-gradient(to right, #198754, #95C93E)",
+              },
+        }).showToast();
+    } else {
+        Toastify({
+            text: registro.modelo + " " + registro.color + " " + registro.talle + " " + registro.estado,
+            duration: 3000,
+            gravity: top,
+            position: top,
+            style: {
+                background: "linear-gradient(to right, #DC3545, #FFC271)",
+              },
+        }).showToast();
+
+    }
+    
 
     const listadoString = localStorage.getItem('registros')
     if (listadoString) {
