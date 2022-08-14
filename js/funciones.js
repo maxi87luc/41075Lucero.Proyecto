@@ -7,12 +7,13 @@ function porcentaje (num1, num2) {
     return ((num1/num2)*100).toFixed(1) + "%"
   }
 function crearRegistro (modelo, color, talle, estado) {
+    const dt = DateTime.now();
     const registro = new Registro (
-        fecha.getDate(),
-        (fecha.getMonth())+1,
-        fecha.getFullYear(),      
-        fecha.getHours(),
-        fecha.getMinutes(),
+        
+
+        dt.toLocaleString(DateTime.DATE_SHORT),
+        dt.hour,
+        dt.minute,
         operario,
         maquina,
         modelo,
@@ -21,6 +22,29 @@ function crearRegistro (modelo, color, talle, estado) {
         1,
         estado   
     )
+    if (registro.estado == "OK"){
+        Toastify({
+            text: registro.modelo + " " + registro.color + " " + registro.talle + " " + registro.estado,
+            duration: 3000,
+            gravity: top,
+            position: top,
+            style: {
+                background: "linear-gradient(to right, #198754, #95C93E)",
+              },
+        }).showToast();
+    } else {
+        Toastify({
+            text: registro.modelo + " " + registro.color + " " + registro.talle + " " + registro.estado,
+            duration: 3000,
+            gravity: top,
+            position: top,
+            style: {
+                background: "linear-gradient(to right, #DC3545, #FFC271)",
+              },
+        }).showToast();
+
+    }
+    
 
     const listadoString = localStorage.getItem('registros')
     if (listadoString) {
@@ -42,9 +66,7 @@ function crearRegistro (modelo, color, talle, estado) {
     const tabla = document.getElementById('tabla');
     const tr = document.createElement('tr');
 
-    tr.innerHTML = `
-        <td>${registro.año}</td>
-        <td>${registro.mes}</td>
+    tr.innerHTML = `       
         <td>${registro.dia}</td>
         <td>${registro.hora}</td>
         <td>${registro.minuto}</td>

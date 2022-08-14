@@ -1,7 +1,7 @@
 
 
 
-
+const DateTime = luxon.DateTime;
 const tabla = document.getElementById('tabla');
 const listadoString = localStorage.getItem('registros')
 let listado = JSON.parse(listadoString) || [];
@@ -50,14 +50,17 @@ const ingreso = document.getElementById('form-ingreso');
 let operario
 let maquina
 let horaInicio
-const fecha = new Date();
+
+
+const dt = DateTime.now();
+console.log( operario, maquina, horaInicio)
+
 
 operarioString = localStorage.getItem('operario')
 operario = JSON.parse(operarioString)
 maquinaString = localStorage.getItem('maquina')
 maquina = JSON.parse(maquinaString)
-horaInicioString = localStorage.getItem('horaInicio')
-horaInicio = JSON.parse(horaInicioString)  
+  
 
 
 
@@ -67,8 +70,8 @@ if (operario==undefined) {
         const formIngreso = (e.target)
         operario = formIngreso[0].value;
         maquina = formIngreso[1].value;
-        let hora = new Date();
-        horaInicio = hora;
+        
+        horaInicio = dt.hour;
         const datosOperario = document.getElementById('pantallaInicio');
         datosOperario.className = 'datos-operario d-none' ; 
         const h1maquina = document.getElementById('h1maquina');
@@ -98,8 +101,26 @@ if (operario==undefined) {
 
 const cerrarSesion = document.getElementById('cerrarSesion');
 cerrarSesion.addEventListener('click', (e)=>{
-    localStorage.clear();
-    location.reload();
+    swal({
+        title: "¿Seguro que desea salir?",
+        text: "Se restaruraran a cero todos los registros",
+        icon: "warning",
+        buttons: true,
+        dangerMode: true,
+      })
+      .then((willDelete) => {
+        if (willDelete) {
+          swal("Su sesion ha terminado, hasta pronto", {
+            icon: "success",
+            
+          });
+            localStorage.clear();
+            location.reload();
+        } else {
+          swal("Puede continuar generando registros");
+        }
+      });
+    
 })
 
 
@@ -108,8 +129,8 @@ cerrarSesion.addEventListener('click', (e)=>{
 // Header ----------------------------------------------
 
 const fechaYHora = document.getElementById('hora');
-const dia = new Date();
-fechaYHora.innerText = dia.getDate() + "/" + dia.getMonth();
+
+fechaYHora.innerText = dt.day + "/" + dt.month;
 
 
 
