@@ -8,11 +8,10 @@ let listado = JSON.parse(listadoString) || [];
 
 
 
-    listado.forEach(({año, mes, dia, hora, minuto, operario, maquina, modelo, color, talle, cantidad, estado})=> {
+    listado.forEach(({dia, hora, minuto, operario, maquina, modelo, color, talle, cantidad, estado})=> {
         const tr = document.createElement('tr');
         tr.innerHTML = `
-        <td>${año}</td>
-        <td>${mes}</td>
+        
         <td>${dia}</td>
         <td>${hora}</td>
         <td>${minuto}</td>
@@ -136,7 +135,22 @@ fechaYHora.innerText = dt.day + "/" + dt.month;
 
 //Modelo 1--------------------------------
 
-let modelo1
+
+
+let modelos1 = [];
+const cargarModelos1 = async () => {
+  const response = await fetch('./modelos.json');
+  const data = await response.json();  
+
+  modelos1 = data;
+
+  const select1 = document.getElementById('modelo1');
+  select1.innerHTML = data.map((modelo1) => `<option value="${modelo1.nombre}">${modelo1.nombre}</option>`);
+
+
+}
+
+cargarModelos1();
 
 
 
@@ -272,7 +286,21 @@ botonOk17.addEventListener('click', () => {
 
 //Modelo 2--------------------------------
 
-let modelo2
+
+let modelos2 = [];
+const cargarModelos2 = async () => {
+  const response = await fetch('./modelos.json');
+  const data = await response.json();  
+
+  modelos2 = data;
+
+  const select2 = document.getElementById('modelo2');
+  select2.innerHTML = data.map((modelo2) => `<option value="${modelo2.nombre}">${modelo2.nombre}</option>`);
+
+
+}
+
+cargarModelos2();
 
 
 
@@ -407,7 +435,20 @@ botonOk27.addEventListener('click', () => {
 
 //Modelo 3--------------------------------
 
-let modelo3
+let modelos3 = [];
+const cargarModelos3 = async () => {
+  const response = await fetch('./modelos.json');
+  const data = await response.json();  
+
+  modelos3 = data;
+
+  const select3 = document.getElementById('modelo3');
+  select3.innerHTML = data.map((modelo3) => `<option value="${modelo3.nombre}">${modelo3.nombre}</option>`);
+
+
+}
+
+cargarModelos3();
 
 
 
@@ -539,9 +580,22 @@ botonOk37.addEventListener('click', () => {
     crearRegistro(modelo3.nombre, modelo3.color, 40, "OK") 
 });
 
-//Modelo 3--------------------------------
+//Modelo 4--------------------------------
 
-let modelo4
+let modelos4 = [];
+const cargarModelos4 = async () => {
+  const response = await fetch('./modelos.json');
+  const data = await response.json();  
+
+  modelos4 = data;
+
+  const select4 = document.getElementById('modelo4');
+  select4.innerHTML = data.map((modelo4) => `<option value="${modelo4.nombre}">${modelo4.nombre}</option>`);
+
+
+}
+
+cargarModelos4();
 
 
 
