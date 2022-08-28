@@ -164,7 +164,22 @@ form1.addEventListener('submit', (e)=> {
         nombre: formulario1[0].value,
         color: formulario1[1].value,
         tiempo: parseInt(formulario1[2].value)
+        
     }
+    botonNoOk11.disabled = true;
+    botonOk11.disabled = true;
+    botonNoOk12.disabled = true;
+    botonOk12.disabled = true;
+    botonNoOk13.disabled = true;
+    botonOk13.disabled = true;
+    botonNoOk14.disabled = true;
+    botonOk14.disabled = true;
+    botonNoOk15.disabled = true;
+    botonOk15.disabled = true;
+    botonNoOk16.disabled = true;
+    botonOk16.disabled = true;
+    botonNoOk17.disabled = true;
+    botonOk17.disabled = true;
 
     
 })
@@ -315,6 +330,20 @@ form2.addEventListener('submit', (e)=> {
         color: formulario2[1].value,
         tiempo: parseInt(formulario2[2].value)
     }
+    botonNoOk21.disabled = true;
+    botonOk21.disabled = true;
+    botonNoOk22.disabled = true;
+    botonOk22.disabled = true;
+    botonNoOk23.disabled = true;
+    botonOk23.disabled = true;
+    botonNoOk24.disabled = true;
+    botonOk24.disabled = true;
+    botonNoOk25.disabled = true;
+    botonOk25.disabled = true;
+    botonNoOk26.disabled = true;
+    botonOk26.disabled = true;
+    botonNoOk27.disabled = true;
+    botonOk27.disabled = true;
 
     console.log(modelo2)
 })
@@ -463,7 +492,20 @@ form3.addEventListener('submit', (e)=> {
         color: formulario3[1].value,
         tiempo: parseInt(formulario3[2].value)
     }
-
+    botonNoOk31.disabled = true;
+    botonOk31.disabled = true;
+    botonNoOk32.disabled = true;
+    botonOk32.disabled = true;
+    botonNoOk33.disabled = true;
+    botonOk33.disabled = true;
+    botonNoOk34.disabled = true;
+    botonOk34.disabled = true;
+    botonNoOk35.disabled = true;
+    botonOk35.disabled = true;
+    botonNoOk36.disabled = true;
+    botonOk36.disabled = true;
+    botonNoOk37.disabled = true;
+    botonOk37.disabled = true;
     console.log(modelo3)
 })
 
@@ -610,6 +652,20 @@ form4.addEventListener('submit', (e)=> {
         color: formulario4[1].value,
         tiempo: parseInt(formulario4[2].value)
     }
+    botonNoOk41.disabled = true;
+    botonOk41.disabled = true;
+    botonNoOk42.disabled = true;
+    botonOk42.disabled = true;
+    botonNoOk43.disabled = true;
+    botonOk43.disabled = true;
+    botonNoOk44.disabled = true;
+    botonOk44.disabled = true;
+    botonNoOk45.disabled = true;
+    botonOk45.disabled = true;
+    botonNoOk46.disabled = true;
+    botonOk46.disabled = true;
+    botonNoOk47.disabled = true;
+    botonOk47.disabled = true;
 
     console.log(modelo4)
 })
