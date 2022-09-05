@@ -644,15 +644,15 @@ function isChecked46(){
     const Check46 = document.getElementById('Check46');
     if (Check46.checked){        
         id46 = setInterval(() => {
-            time47++;
+            time46++;
             
           }, 1000);
-        botonNoOk47.disabled = false;
-        botonOk47.disabled = false;
+        botonNoOk46.disabled = false;
+        botonOk46.disabled = false;
     } else {        
-        clearInterval(id47);
-        botonNoOk47.disabled = true;
-        botonOk47.disabled = true;
+        clearInterval(id46);
+        botonNoOk46.disabled = true;
+        botonOk46.disabled = true;
         
 
     }
@@ -666,7 +666,7 @@ let id47
 
 function isChecked47(){
     const Check47 = document.getElementById('Check47');
-    if (Check37.checked){        
+    if (Check47.checked){        
         id47 = setInterval(() => {
             time47++;
             

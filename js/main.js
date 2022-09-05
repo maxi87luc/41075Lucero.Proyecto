@@ -157,6 +157,7 @@ cargarModelos1();
 const form1 = document.getElementById('form1');
 
 
+
 form1.addEventListener('submit', (e)=> {
     e.preventDefault();
     const formulario1 = (e.target); 
@@ -181,6 +182,8 @@ form1.addEventListener('submit', (e)=> {
     botonNoOk17.disabled = true;
     botonOk17.disabled = true;
 
+    console.log(modelo1)
+
     
 })
 
@@ -193,13 +196,15 @@ const botonOk11 = document.getElementById('botonOK11');
 
 
 botonNoOk11.addEventListener('click', () => {   
-    crearRegistro(modelo1.nombre, modelo1.color, 35, "fallado")    
+    crearRegistro(modelo1.nombre, modelo1.color, 35, "fallado")
+    produccion1++    
 });   
 
    
 
 botonOk11.addEventListener('click', () => {
-    crearRegistro(modelo1.nombre, modelo1.color, 35, "OK") 
+    crearRegistro(modelo1.nombre, modelo1.color, 35, "OK")
+    produccion1++ 
 });
 
 //Talle 2
@@ -209,13 +214,15 @@ const botonOk12 = document.getElementById('botonOK12');
 
 
 botonNoOk12.addEventListener('click', () => {   
-    crearRegistro(modelo1.nombre, modelo1.color, 36, "fallado")    
+    crearRegistro(modelo1.nombre, modelo1.color, 36, "fallado")
+    produccion1++    
 });   
 
    
 
 botonOk12.addEventListener('click', () => {
-    crearRegistro(modelo1.nombre, modelo1.color, 36, "OK") 
+    crearRegistro(modelo1.nombre, modelo1.color, 36, "OK")
+    produccion1++ 
 });
 
 //Talle 3
@@ -225,13 +232,15 @@ const botonOk13 = document.getElementById('botonOK13');
 
 
 botonNoOk13.addEventListener('click', () => {   
-    crearRegistro(modelo1.nombre, modelo1.color, 37, "fallado")    
+    crearRegistro(modelo1.nombre, modelo1.color, 37, "fallado")
+    produccion1++    
 });   
 
    
 
 botonOk13.addEventListener('click', () => {
-    crearRegistro(modelo1.nombre, modelo1.color, 37, "OK") 
+    crearRegistro(modelo1.nombre, modelo1.color, 37, "OK")
+    produccion1++ 
 });
 
 //Talle 4
@@ -241,13 +250,15 @@ const botonOk14 = document.getElementById('botonOK14');
 
 
 botonNoOk14.addEventListener('click', () => {   
-    crearRegistro(modelo1.nombre, modelo1.color, 38, "fallado")    
+    crearRegistro(modelo1.nombre, modelo1.color, 38, "fallado")
+    produccion1++    
 });   
 
    
 
 botonOk14.addEventListener('click', () => {
-    crearRegistro(modelo1.nombre, modelo1.color, 38, "OK") 
+    crearRegistro(modelo1.nombre, modelo1.color, 38, "OK")
+    produccion1++ 
 });
 
 //Talle 5
@@ -257,13 +268,15 @@ const botonOk15 = document.getElementById('botonOK15');
 
 
 botonNoOk15.addEventListener('click', () => {   
-    crearRegistro(modelo1.nombre, modelo1.color, 39, "fallado")    
+    crearRegistro(modelo1.nombre, modelo1.color, 39, "fallado")
+    produccion1++    
 });   
 
    
 
 botonOk15.addEventListener('click', () => {
-    crearRegistro(modelo1.nombre, modelo1.color, 39, "OK") 
+    crearRegistro(modelo1.nombre, modelo1.color, 39, "OK")
+    produccion1++ 
 });
 
 //Talle 6
@@ -273,13 +286,15 @@ const botonOk16 = document.getElementById('botonOK16');
 
 
 botonNoOk16.addEventListener('click', () => {   
-    crearRegistro(modelo1.nombre, modelo1.color, 40, "fallado")    
+    crearRegistro(modelo1.nombre, modelo1.color, 40, "fallado")
+    produccion1++    
 });   
 
    
 
 botonOk16.addEventListener('click', () => {
-    crearRegistro(modelo1.nombre, modelo1.color, 40, "OK") 
+    crearRegistro(modelo1.nombre, modelo1.color, 40, "OK")
+    produccion1++ 
 });
 
 //Talle 7
@@ -289,13 +304,15 @@ const botonOk17 = document.getElementById('botonOK17');
 
 
 botonNoOk17.addEventListener('click', () => {   
-    crearRegistro(modelo1.nombre, modelo1.color, 40, "fallado")    
+    crearRegistro(modelo1.nombre, modelo1.color, 40, "fallado")
+    produccion1++    
 });   
 
    
 
 botonOk17.addEventListener('click', () => {
-    crearRegistro(modelo1.nombre, modelo1.color, 40, "OK") 
+    crearRegistro(modelo1.nombre, modelo1.color, 40, "OK")
+    produccion1++ 
 });
 
 
@@ -357,13 +374,15 @@ const botonOk21 = document.getElementById('botonOK21');
 
 
 botonNoOk21.addEventListener('click', () => {   
-    crearRegistro(modelo2.nombre, modelo2.color, 35, "fallado")    
+    crearRegistro(modelo2.nombre, modelo2.color, 35, "fallado") 
+    produccion2++   
 });   
 
    
 
 botonOk21.addEventListener('click', () => {
     crearRegistro(modelo2.nombre, modelo2.color, 35, "OK") 
+    produccion2++
 });
 
 //Talle 2
@@ -373,13 +392,15 @@ const botonOk22 = document.getElementById('botonOK22');
 
 
 botonNoOk22.addEventListener('click', () => {   
-    crearRegistro(modelo2.nombre, modelo2.color, 36, "fallado")    
+    crearRegistro(modelo2.nombre, modelo2.color, 36, "fallado") 
+    produccion2++   
 });   
 
    
 
 botonOk22.addEventListener('click', () => {
-    crearRegistro(modelo2.nombre, modelo2.color, 36, "OK") 
+    crearRegistro(modelo2.nombre, modelo2.color, 36, "OK")
+    produccion2++ 
 });
 
 //Talle 3
@@ -389,12 +410,14 @@ const botonOk23 = document.getElementById('botonOK23');
 
 
 botonNoOk23.addEventListener('click', () => {   
-    crearRegistro(modelo2.nombre, modelo2.color, 37, "fallado")    
+    crearRegistro(modelo2.nombre, modelo2.color, 37, "fallado")
+    produccion2++    
 });   
 
    
 botonOk23.addEventListener('click', () => {
-    crearRegistro(modelo2.nombre, modelo2.color, 37, "OK") 
+    crearRegistro(modelo2.nombre, modelo2.color, 37, "OK")
+    produccion2++ 
 });
 
 //Talle 4
@@ -404,13 +427,15 @@ const botonOk24 = document.getElementById('botonOK24');
 
 
 botonNoOk24.addEventListener('click', () => {   
-    crearRegistro(modelo2.nombre, modelo2.color, 38, "fallado")    
+    crearRegistro(modelo2.nombre, modelo2.color, 38, "fallado") 
+    produccion2++   
 });   
 
    
 
 botonOk24.addEventListener('click', () => {
-    crearRegistro(modelo2.nombre, modelo2.color, 38, "OK") 
+    crearRegistro(modelo2.nombre, modelo2.color, 38, "OK")
+    produccion2++ 
 });
 
 //Talle 5
@@ -420,13 +445,15 @@ const botonOk25 = document.getElementById('botonOK25');
 
 
 botonNoOk25.addEventListener('click', () => {   
-    crearRegistro(modelo2.nombre, modelo2.color, 39, "fallado")    
+    crearRegistro(modelo2.nombre, modelo2.color, 39, "fallado") 
+    produccion2++   
 });   
 
    
 
 botonOk25.addEventListener('click', () => {
-    crearRegistro(modelo2.nombre, modelo2.color, 39, "OK") 
+    crearRegistro(modelo2.nombre, modelo2.color, 39, "OK")
+    produccion2++ 
 });
 
 //Talle 6
@@ -436,13 +463,15 @@ const botonOk26 = document.getElementById('botonOK26');
 
 
 botonNoOk26.addEventListener('click', () => {   
-    crearRegistro(modelo2.nombre, modelo2.color, 40, "fallado")    
+    crearRegistro(modelo2.nombre, modelo2.color, 40, "fallado")
+    produccion2++    
 });   
 
    
 
 botonOk26.addEventListener('click', () => {
-    crearRegistro(modelo2.nombre, modelo2.color, 40, "OK") 
+    crearRegistro(modelo2.nombre, modelo2.color, 40, "OK")
+    produccion2++ 
 });
 
 //Talle 7
@@ -452,13 +481,15 @@ const botonOk27 = document.getElementById('botonOK27');
 
 
 botonNoOk27.addEventListener('click', () => {   
-    crearRegistro(modelo2.nombre, modelo2.color, 40, "fallado")    
+    crearRegistro(modelo2.nombre, modelo2.color, 40, "fallado")
+    produccion2++    
 });   
 
    
 
 botonOk27.addEventListener('click', () => {
-    crearRegistro(modelo2.nombre, modelo2.color, 40, "OK") 
+    crearRegistro(modelo2.nombre, modelo2.color, 40, "OK")
+    produccion2++ 
 });
 
 
@@ -518,13 +549,15 @@ const botonOk31 = document.getElementById('botonOK31');
 
 
 botonNoOk31.addEventListener('click', () => {   
-    crearRegistro(modelo3.nombre, modelo3.color, 35, "fallado")    
+    crearRegistro(modelo3.nombre, modelo3.color, 35, "fallado")
+    produccion3++    
 });   
 
    
 
 botonOK31.addEventListener('click', () => {
-    crearRegistro(modelo3.nombre, modelo3.color, 35, "OK") 
+    crearRegistro(modelo3.nombre, modelo3.color, 35, "OK")
+    produccion3++ 
 });
 
 //Talle 2
@@ -534,13 +567,15 @@ const botonOk32 = document.getElementById('botonOK32');
 
 
 botonNoOk32.addEventListener('click', () => {   
-    crearRegistro(modelo3.nombre, modelo3.color, 36, "fallado")    
+    crearRegistro(modelo3.nombre, modelo3.color, 36, "fallado")
+    produccion3++    
 });   
 
    
 
 botonOk32.addEventListener('click', () => {
-    crearRegistro(modelo3.nombre, modelo3.color, 36, "OK") 
+    crearRegistro(modelo3.nombre, modelo3.color, 36, "OK")
+    produccion3++ 
 });
 
 //Talle 3
@@ -550,12 +585,14 @@ const botonOk33 = document.getElementById('botonOK33');
 
 
 botonNoOk33.addEventListener('click', () => {   
-    crearRegistro(modelo3.nombre, modelo3.color, 37, "fallado")    
+    crearRegistro(modelo3.nombre, modelo3.color, 37, "fallado")
+    produccion3++    
 });   
 
    
 botonOk33.addEventListener('click', () => {
-    crearRegistro(modelo3.nombre, modelo3.color, 37, "OK") 
+    crearRegistro(modelo3.nombre, modelo3.color, 37, "OK")
+    produccion3++ 
 });
 
 //Talle 4
@@ -565,13 +602,15 @@ const botonOk34 = document.getElementById('botonOK34');
 
 
 botonNoOk34.addEventListener('click', () => {   
-    crearRegistro(modelo3.nombre, modelo3.color, 38, "fallado")    
+    crearRegistro(modelo3.nombre, modelo3.color, 38, "fallado")
+    produccion3++    
 });   
 
    
 
 botonOk34.addEventListener('click', () => {
-    crearRegistro(modelo3.nombre, modelo3.color, 38, "OK") 
+    crearRegistro(modelo3.nombre, modelo3.color, 38, "OK")
+    produccion3++ 
 });
 
 //Talle 5
@@ -581,13 +620,15 @@ const botonOk35 = document.getElementById('botonOK35');
 
 
 botonNoOk35.addEventListener('click', () => {   
-    crearRegistro(modelo3.nombre, modelo3.color, 39, "fallado")    
+    crearRegistro(modelo3.nombre, modelo3.color, 39, "fallado")
+    produccion3++    
 });   
 
    
 
 botonOk35.addEventListener('click', () => {
-    crearRegistro(modelo3.nombre, modelo3.color, 39, "OK") 
+    crearRegistro(modelo3.nombre, modelo3.color, 39, "OK")
+    produccion3++ 
 });
 
 //Talle 6
@@ -597,13 +638,15 @@ const botonOk36 = document.getElementById('botonOK36');
 
 
 botonNoOk36.addEventListener('click', () => {   
-    crearRegistro(modelo3.nombre, modelo3.color, 40, "fallado")    
+    crearRegistro(modelo3.nombre, modelo3.color, 40, "fallado")
+    produccion3++    
 });   
 
    
 
 botonOk36.addEventListener('click', () => {
-    crearRegistro(modelo3.nombre, modelo3.color, 40, "OK") 
+    crearRegistro(modelo3.nombre, modelo3.color, 40, "OK")
+    produccion3++ 
 });
 
 //Talle 7
@@ -613,13 +656,15 @@ const botonOk37 = document.getElementById('botonOK37');
 
 
 botonNoOk37.addEventListener('click', () => {   
-    crearRegistro(modelo3.nombre, modelo3.color, 40, "fallado")    
+    crearRegistro(modelo3.nombre, modelo3.color, 40, "fallado")
+    produccion3++    
 });   
 
    
 
 botonOk37.addEventListener('click', () => {
-    crearRegistro(modelo3.nombre, modelo3.color, 40, "OK") 
+    crearRegistro(modelo3.nombre, modelo3.color, 40, "OK")
+    produccion3++ 
 });
 
 //Modelo 4--------------------------------
@@ -679,13 +724,15 @@ const botonOk41 = document.getElementById('botonOK41');
 
 
 botonNoOk41.addEventListener('click', () => {   
-    crearRegistro(modelo4.nombre, modelo4.color, 35, "fallado")    
+    crearRegistro(modelo4.nombre, modelo4.color, 35, "fallado")
+    produccion4++    
 });   
 
    
 
 botonOK41.addEventListener('click', () => {
-    crearRegistro(modelo4.nombre, modelo4.color, 35, "OK") 
+    crearRegistro(modelo4.nombre, modelo4.color, 35, "OK")
+    produccion4++ 
 });
 
 //Talle 2
@@ -695,13 +742,15 @@ const botonOk42 = document.getElementById('botonOK42');
 
 
 botonNoOk42.addEventListener('click', () => {   
-    crearRegistro(modelo4.nombre, modelo4.color, 36, "fallado")    
+    crearRegistro(modelo4.nombre, modelo4.color, 36, "fallado")
+    produccion4++    
 });   
 
    
 
 botonOk42.addEventListener('click', () => {
-    crearRegistro(modelo4.nombre, modelo4.color, 36, "OK") 
+    crearRegistro(modelo4.nombre, modelo4.color, 36, "OK")
+    produccion4++ 
 });
 
 //Talle 3
@@ -711,12 +760,14 @@ const botonOk43 = document.getElementById('botonOK43');
 
 
 botonNoOk43.addEventListener('click', () => {   
-    crearRegistro(modelo4.nombre, modelo4.color, 37, "fallado")    
+    crearRegistro(modelo4.nombre, modelo4.color, 37, "fallado")
+    produccion4++    
 });   
 
    
 botonOk43.addEventListener('click', () => {
-    crearRegistro(modelo4.nombre, modelo4.color, 37, "OK") 
+    crearRegistro(modelo4.nombre, modelo4.color, 37, "OK")
+    produccion4++ 
 });
 
 //Talle 4
@@ -726,13 +777,15 @@ const botonOk44 = document.getElementById('botonOK44');
 
 
 botonNoOk44.addEventListener('click', () => {   
-    crearRegistro(modelo4.nombre, modelo4.color, 38, "fallado")    
+    crearRegistro(modelo4.nombre, modelo4.color, 38, "fallado")
+    produccion4++    
 });   
 
    
 
 botonOk44.addEventListener('click', () => {
-    crearRegistro(modelo4.nombre, modelo4.color, 38, "OK") 
+    crearRegistro(modelo4.nombre, modelo4.color, 38, "OK")
+    produccion4++ 
 });
 
 //Talle 5
@@ -742,13 +795,15 @@ const botonOk45 = document.getElementById('botonOK45');
 
 
 botonNoOk45.addEventListener('click', () => {   
-    crearRegistro(modelo4.nombre, modelo4.color, 39, "fallado")    
+    crearRegistro(modelo4.nombre, modelo4.color, 39, "fallado")
+    produccion4++    
 });   
 
    
 
 botonOk45.addEventListener('click', () => {
-    crearRegistro(modelo4.nombre, modelo4.color, 39, "OK") 
+    crearRegistro(modelo4.nombre, modelo4.color, 39, "OK")
+    produccion4++ 
 });
 
 //Talle 6
@@ -758,13 +813,15 @@ const botonOk46 = document.getElementById('botonOK46');
 
 
 botonNoOk46.addEventListener('click', () => {   
-    crearRegistro(modelo4.nombre, modelo4.color, 40, "fallado")    
+    crearRegistro(modelo4.nombre, modelo4.color, 40, "fallado")
+    produccion4++    
 });   
 
    
 
 botonOk46.addEventListener('click', () => {
-    crearRegistro(modelo4.nombre, modelo4.color, 40, "OK") 
+    crearRegistro(modelo4.nombre, modelo4.color, 40, "OK")
+    produccion4++ 
 });
 
 //Talle 7
@@ -774,13 +831,15 @@ const botonOk47 = document.getElementById('botonOK47');
 
 
 botonNoOk47.addEventListener('click', () => {   
-    crearRegistro(modelo4.nombre, modelo4.color, 40, "fallado")    
+    crearRegistro(modelo4.nombre, modelo4.color, 40, "fallado")
+    produccion4++    
 });   
 
    
 
 botonOk47.addEventListener('click', () => {
-    crearRegistro(modelo4.nombre, modelo4.color, 40, "OK") 
+    crearRegistro(modelo4.nombre, modelo4.color, 40, "OK")
+    produccion4++ 
 });
 
 
